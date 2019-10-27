@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="./assets/img/icon.png" rel="shortcut icon">
+    <title>Valange</title>
+
+    <!-- Le styles -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/languages.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+      .btn img {
+          display: inline-block;
+          vertical-align: middle;
+          padding: 5px;
+          border-radius: 5px;
+      }
+      .video {
+        width:80%;
+        min-height:300px;
+        margin-left:10%;
+      }
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+        img#footerimg {
+        height: 65px;
+        margin-left: 1%;
+        margin-right: 1%;
+      }
+    </style>
+    <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="./assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="./assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div id="mainNav" class="navbar navbar-inverse navbar-fixed-top">  <!--inverse // defalut-->
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar navbar-fixed-top" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Valange</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="./valange.html">À propos</a></li>
+              <li><a href="./rechercher.html">Rechercher une vidéo</a></li>
+              <li><a href="./proposer.html">Proposer une vidéo</a></li>
+              <li><a href="./contact_re.html">Nous contacter</a></li>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="">Français</a></li>
+                  <li><a href="" onclick="alert('Se préparer au service.')">Anglais</a></li>
+                  <li><a href="" onclick="alert('Se préparer au service.')">Coréen</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>-->
+            </ul>
+            <form class="navbar-form pull-right">
+              <button type="submit" class="btn" data-toggle="modal" data-target="#myModal" ><img class="media-object" src="./assets/img/Eng.png" style="width:20px;">Anglais</button>
+            </form>
+            <!--<form class="navbar-form pull-right">
+              <input type="text" class="input-medium search-query" placeholder="Entrez votre mot-clé *">
+              <button type="submit" class="btn" style="margin-right: 5px;"><i class="fa fa-fw fa-search"></i> Recherche</button>
+            </form>-->
+            <!--Google translation
+            <form class="navbar-form pull-right">
+              <div id="google_translate_element"></div>
+            </form>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!--<div class="btn-group dropup">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <span class="lang-sm lang-lbl-full" lang="it"></span> <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><span class="lang-sm lang-lbl-full" lang="ar"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="be"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="bg"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="cs"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="da"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="de"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="el"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="en"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="es"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="et"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="fi"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="fr"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="ga"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="hi"></span></li>
+    <li><span class="lang-sm lang-lbl-full" lang="hr"></span></li>
+  </ul>
+</div>-->
+
+      <div class="media">
+        <a class="pull-left" href="./index.html">
+          <img class="media-object" src="./assets/img/logo/valangelogonobackground.png" style="width:50%;"><!--data-src="holder.js/64x64" src="./assets/img/Logo.png" >-->
+        </a>
+        <!--<div class="media-body">
+          <h4 class="media-heading">Media heading</h4>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>-->
+      </div><br/>
+
+      <!--<div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span1">
+            <br/>
+            <img src="./assets/img/Logo.png" class="img-rounded" style="width:100%;">
+          </div>
+          <div class="span10">
+            <h1><a style="color:red; ">B</a>ienvenue</h1>
+            <p class="lead">Valange est né d’un désir collectif : valoriser et mettre en commun un vaste corpus vidéo autour de l’enfance… Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi massa velit, porta at aliquam at, lobortis semper lorem. Vestibulum posuere vitae turpis ultrices aliquet. Cras aliquet efficitur consequat.</p>
+          </div>
+        </div>
+      </div>
+      <br/>-->
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" style="background-image:url('./assets/img/Valange-bandeau.png')">
+        <br/><br/><br/><br/><br/>
+        <!--<h1>Welcome, vister!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>-->
+      </div><br/>
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span5">
+            <h1><a style="color:#ed6e4e; ">B</a>ienvenue</h1>
+            <p class="lead">Valange_2 est né d’un désir collectif : valoriser et mettre en commun un vaste corpus vidéo autour de l’enfance… Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi massa velit, porta at aliquam at, lobortis semper lorem. Vestibulum posuere vitae turpis ultrices aliquet. Cras aliquet efficitur consequat.</p>
+
+            <!--<br/>
+            <img src="./assets/img/Logo.png" class="img-rounded">-->
+          </div>
+          <div class="span7">
+            <video src="./data/video/Signes-en-Famille-accueil-V2.mp4" controls style="width:100%;"></video>
+            </div>
+        </div>
+      </div>
+      <br/>
+
+      <h1><a style="color:#ed6e4e; ">A</a>ctualités</h1>
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span7">
+            <h3>Table ronde : </br>Comment s’adresser aux enfants ?</h3>
+            <p class="lead">Le samedi 24 novembre 2018, une table ronde organisée dans le cadre du Festival des Idées de Université Sorbonne Paris Cité a rassemblé des linguistes spécialisé·es dans l’acquisition et le traitement automatique des langues, des auteures jeunesse et une journaliste autour de ces questions. Un article dans <i>The Conversation</i> fait suite à cette rencontre. </p>
+            <p style="text-align: center;"><a class="btn" href="https://theconversation.com/comment-les-adultes-transmettent-le-langage-aux-enfants-107830">Découvrir &raquo;</a></p>
+            <!--<br/>
+            <img src="./assets/img/Logo.png" class="img-rounded">-->
+          </div>
+          <div class="span5">
+            <img src="./assets/img/Image1.png" style="width:100%;">
+          </div>
+        </div>
+      <hr></br>
+      <div class="row-fluid">
+        <div class="span7">
+          <h3>Publication : </br>La La Langue, comment tu as appris à parler</h3>
+          <p class="lead">Demandez à un enfant s’il sait comment il a appris à parler. Il n’en a pas la moindre idée. Et si vous posez la même question à leurs parents, il y a tout à parier que vous n’obtiendrez pas davantage de réponse. L'écrivaine Susie Morgenstern, sa fille linguiste Aliyah Morgenstern et l'illustrateur Serge Bloch s'attaquent à ce sujet fondamental dans un album qui explique aux petits comme aux grands toutes les étapes du grand voyage vers la parole.</p>
+          <p style="text-align: center;"><a class="btn" href="http://www.univ-paris3.fr/aliyah-morgenstern-publie-avec-susie-morgenstern-et-serge-bloch-la-la-langue-comment-tu-as-appris-a-parler--542994.kjsp">Découvrir &raquo;</a></p>
+          <!--<br/>
+          <img src="./assets/img/Logo.png" class="img-rounded">-->
+        </div>
+        <div class="span5">
+          <img src="./assets/img/lalalangue.png" style="width:100%;">
+        </div>
+      </div>
+      </div>
+      <br/>
+
+
+    </br>
+    <h1><a style="color:#ed6e4e; ">I</a>ls nous soutiennent</h1></br></br>
+    <div class="row" style="text-align:center;">
+      <a href="http://www.culturecommunication.gouv.fr/Politiques-ministerielles/Langue-francaise-et-langues-de-France"><img src="./assets/img/footer/Logo_culture.jpg" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.modyco.fr/fr/"><img src="./assets/img/footer/Logo_modyco.png" class="img-rounded" id="footerimg"></a>
+      <a href="https://www.ortolang.fr/market/home"><img src="./assets/img/footer/Logo_ortolang.png" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.univ-paris3.fr/"><img src="./assets/img/footer/Logo_paris3_niou.jpg" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.parisnanterre.fr/"><img src="./assets/img/footer/Logo_paris10.png" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.sorbonne-paris-cite.fr/fr"><img src="./assets/img/footer/Logo_pariscite.png" class="img-rounded" id="footerimg"></a>
+      <hr>
+      <p>Valange est un site collaboratif permettant de rassembler un large corpus d’extraits vidéo d’enfants filmés au cours d’études ponctuelles ou longitudinales. Ces études portent sur l’acquisition du langage par des jeunes locuteurs de 0 à 7 ans, entendants et sourds, monolingues et bilingues. Nunc tincidunt justo nulla, ac tincidunt odio fringilla posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper eros lectus, non elementum tortor tristique in. Quisque id fermentum ante. Sed dui enim, semper eget tellus sit amet, cursus malesuada ipsum. Proin in ante commodo, commodo libero et, accumsan orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus ac sodales ante. Curabitur non egestas dui, et tempus sapien.</p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Version anglaise de VaLangE - English version of VaLangE</h4>
+          </div>
+          <div class="modal-body">
+            <p>VaLangE est un bébé projet : il faudra patienter encore un peu avant qu'il devienne parfaitement bilingue. <br>
+              <br>
+              VaLangE is a baby project and is still acquiring the English language. Come back soon to watch it become a fully bilingual website!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </div> <!-- /container -->
+
+    <div id="footer">
+      <div class="container">
+        <p>&copy; Copyright 2018</p>
+        <p class="muted credit">This website made by <a href="http://stat34.github.io/Seongmin/">Seongmin</a>, Ilaine and Constance.</p>
+      </div>
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>-->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap-transition.js"></script>
+    <script src="./assets/js/bootstrap-alert.js"></script>
+    <script src="./assets/js/bootstrap-modal.js"></script>
+    <script src="./assets/js/bootstrap-dropdown.js"></script>
+    <script src="./assets/js/bootstrap-scrollspy.js"></script>
+    <script src="./assets/js/bootstrap-tab.js"></script>
+    <script src="./assets/js/bootstrap-tooltip.js"></script>
+    <script src="./assets/js/bootstrap-popover.js"></script>
+    <script src="./assets/js/bootstrap-button.js"></script>
+    <script src="./assets/js/bootstrap-collapse.js"></script>
+    <script src="./assets/js/bootstrap-carousel.js"></script>
+    <script src="./assets/js/bootstrap-typeahead.js"></script>
+    <script src="./assets/js/bootstrap-affix.js"></script>
+    <script src="./assets/js/agency.min.js"></script>
+
+    <script src="./assets/js/holder/holder.js"></script>
+    <script src="./assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="./assets/js/application.js"></script>
+
+  </body>
+</html>

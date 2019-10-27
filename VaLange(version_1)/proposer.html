@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="./assets/img/icon.png" rel="shortcut icon">
+    <title>Valange</title>
+
+    <!-- Le styles -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/form.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+      .video {
+        width:80%;
+        min-height:300px;
+        margin-left:10%;
+      }
+      .btn img {
+          display: inline-block;
+          vertical-align: middle;
+          padding: 5px;
+          border-radius: 5px;
+      }
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+      img#footerimg {
+        height: 65px;
+      	margin-left: 1%;
+      	margin-right: 1%;
+      }
+    </style>
+    <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="./assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="./assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div id="mainNav" class="navbar navbar-inverse navbar-fixed-top">  <!--inverse // defalut-->
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar navbar-fixed-top" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Valange</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="./valange.html">À propos</a></li>
+              <li><a href="./rechercher.html">Rechercher une vidéo</a></li>
+              <li class="active"><a href="./proposer.html">Proposer une vidéo</a></li>
+              <li><a href="./contact_re.html">Nous contacter</a></li>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="">Français</a></li>
+                  <li><a href="" onclick="alert('Se préparer au service.')">Anglais</a></li>
+                  <li><a href="" onclick="alert('Se préparer au service.')">Coréen</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>-->
+            </ul>
+            <form class="navbar-form pull-right">
+              <button type="submit" class="btn" data-toggle="modal" data-target="#myModal" ><img class="media-object" src="./assets/img/Eng.png" style="width:20px;">Anglais</button>
+            </form>
+            <!--<form class="navbar-form pull-right">
+              <input type="text" class="input-medium search-query" placeholder="Entrez votre mot-clé *">
+              <button type="submit" class="btn" style="margin-right: 5px;"><i class="fa fa-fw fa-search"></i> Recherche</button>
+            </form>-->
+            <!--Google translation
+            <form class="navbar-form pull-right">
+              <div id="google_translate_element"></div>
+            </form>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="media">
+        <a class="pull-left" href="./index.html">
+          <img class="media-object" src="./assets/img/Logo.png" style="width:50%;"><!--data-src="holder.js/64x64" src="./assets/img/Logo.png" >-->
+        </a>
+        <!--<div class="media-body">
+          <h4 class="media-heading">Media heading</h4>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>-->
+      </div><br/>
+
+      <hr>
+
+    </br>
+      <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <br>
+            <h1><a style="color:#ed6e4e; ">F</a>ormulaire de contribution</h1>
+            <p>Bienvenue sur le formulaire de contribution à notre base de données Vidéopédia !</p>
+            <p>Nous vous invitons à remplir ce formulaire avec le plus grand soin, afin de permettre une meilleure indexation de votre vidéo dans notre base. Ce formulaire court (10 minutes maximum) se présente en deux parties la première, courte, porte sur vous en tant que  contributeur·trice, tandis que la seconde porte sur votre contribution. En cas de problème ou de questions, veuillez contacter le ou la <a href="mailto:contactvalange@gmail.com">webmestre</a>.</p>
+            <p>Les champs obligatoires sont suivis de <abbr title="required">*</abbr>.</p><br>
+            <h2>Contributeur·trice</h2>
+            <p>Cette première partie du formulaire porte sur vous en tant que contributeur·trice. Les informations que vous entrez dans cette section ne seront pas mises en ligne sur le site. Nous nous engageons à ne les utiliser que pour vous contacter en cas de problème avec les informations transmises ou la vidéo, ainsi que pour vous notifier de la mise en ligne de cette dernière.</p>
+            <legend>Informations sur le/la contributeur·trice</legend>
+              <form role="form" method="post" id="reused_form" enctype=&quot;multipart/form-data&quot; >
+                  <div class="form-group">
+                      <label for="name"> Nom*</label>
+                      <input type="text" class="form-control" id="nom" name="nom" required maxlength="50">
+                  </div>
+                  <div class="form-group">
+                      <label for="name"> Prénom*</label>
+                      <input type="text" class="form-control" id="prénom" name="prénom" required maxlength="50">
+                  </div>
+                  <div class="form-group">
+                    <label for="name"> Institution</label>
+                    <p>Si vous êtes chercheur·se, précisez l'université, le laboratoire, etc.</p>
+                      <input type="text" class="form-control" id="institution" name="institution" required maxlength="50">
+                  </div>
+                  <div class="form-group">
+                      <label for="email"> E-mail*</label>
+                      <input type="email" class="form-control" id="email" name="email" required maxlength="50">
+                  </div>
+                  <h2>Contribution</h2>
+		              <p>Cette seconde partie du formulaire concerne l'extrait vidéo que vous souhaitez nous soumettre.</p>
+                  <legend>Droit et fichier</legend>
+                  <p>Attention, les vidéos de la base de données VaLangE sont sont soumises à une licence Creative Commons CC-BY-NC-ND (voir XXX sur les droits) et sont accessibles en ligne sans restriction. Il est donc nécessaire d'avoir le droit de partager votre contribution. En cochant la case ci-dessous, vous garantissez que vous disposez bien de ce droit et l'accord signé des parents de l'enfant filmé vous sera alors demandé par mail. La mise en ligne de votre contribution est conditionné par l'acquisition de ce document.</p>
+                  <label class="container_agreement">
+                    <input class="checkbox_agreement" type="checkbox" value="J'ai le droit de déposer cette vidéo dans la base Vidéopédia pour un usage scientifique." >
+                    <span class="checkmark" style="padding-right:10px;"></span>J'ai le droit de déposer cette vidéo dans la base Vidéopédia pour un usage scientifique.
+                  </label>
+                  <div class="form-group">
+                    <input class="form-control" type="hidden" id="agree" name="agree">
+                  </div>
+                  <legend>Informations sur l'enfant</legend>
+                  <div class="form-group">
+                      <label for="name"> Nom de l'enfant*</label>
+                      <input type="text" class="form-control" id="nom_de_l'enfant" name="nom_de_l'enfant" required maxlength="50">
+                  </div>
+                  <p>Genre*</p>
+                  <label class="label_genre"><input class="input_genre" type="radio" name="radio" value="Fille"> Fille<span class="checkmark"></span></label>
+                  <label class="label_genre"><input class="input_genre" type="radio" name="radio" value="Garçon"> Garçon<span class="checkmark"></span></label>
+                  <label class="label_genre"><input class="input_genre" type="radio" name="radio" value="Préfère ne pas préciser"> Préfère ne pas préciser<span class="checkmark"></span></label>
+                  <div class="form-group">
+                    <input class="form-control" type="hidden" id="genre" name="genre">
+                  </div>
+                  <br><p>Âge*<br>Âge de l'enfant au moment de la vidéo au format (A)A;MM(;DD). Par exemple, pour un enfant de 10 mois et 24 jours, mettre 0;10;24 ; pour un enfant de 34 mois, mettre 2;10 ; pour un enfant de 10 ans 2 mois et 3 jours, mettre 10;02;03.</p>
+                  <div class="form-group">
+                      <input type="text" class="form-control" id="age" name="age" required maxlength="50">
+                  </div>
+                  <div class="form-group">
+                      <label for="name"> Localisation*</label>
+                      <p>Ville et pays où vit l'enfant au moment de la vidéo.</p>
+                      <input type="text" class="form-control" id="localisation" name="localisation" required maxlength="50">
+                  </div>
+                  <br><p>Langue(s) maternelle(s)*<br>Langue(s) parlée(s) par l'enfant. Sélectionnez plusieurs langues si l'enfant est bilingue ou plurilingue. Si la langue n'est pas proposée, veuillez entrer la langue dans "Autre" et préciser sa variante s'il y a lieu.</p>
+                  <label class="container_langue_français">
+                    <input class="checkbox_langue_français" type="checkbox" value="français (France métropolitaine)" >
+                    <span class="checkmark" style="padding-right:10px;"></span>français (France métropolitaine)
+                  </label>
+                  <div class="form-group">
+                    <input class="form-control" type="hidden" id="langue_français" name="langue_français">
+                  </div>
+                  <label class="container_langue_anglais">
+                    <input class="checkbox_langue_anglais" type="checkbox" value="anglais (Royaume-Uni)" >
+                    <span class="checkmark" style="padding-right:10px;"></span>anglais (Royaume-Uni)
+                  </label>
+                  <div class="form-group">
+                    <input class="form-control" type="hidden" id="langue_anglais" name="langue_anglais">
+                  </div>
+                  <label class="container_langue_italien">
+                    <input class="checkbox_langue_italien" type="checkbox" value="italien" >
+                    <span class="checkmark" style="padding-right:10px;"></span>italien
+                  </label>
+                  <div class="form-group">
+                    <input class="form-control" type="hidden" id="langue_italien" name="langue_italien">
+                  </div>
+                  <label class="container_langue_portugais">
+                    <input class="checkbox_langue_portugais" type="checkbox" value="portugais (Brésil)" >
+                    <span class="checkmark" style="padding-right:10px;"></span>portugais (Brésil)
+                  </label>
+                  <div class="form-group">
+                    <input class="form-control" type="hidden" id="langue_portugais" name="langue_portugais">
+                  </div>
+                  <label class="container_langue_autre">
+                    <input class="checkbox_langue_autre" type="checkbox" value="Autre" >
+                    <span class="checkmark" style="padding-right:10px;"></span>Autre
+                  </label>
+                  <div class="form-group">
+                    <input class="form-control" type="hidden" id="langue_autre" name="langue_autre">
+                  </div>
+                  <legend>Informations sur l'extrait</legend>
+                  <p>Genre de discours</p><br>
+                  <label class="label_discour"><input class="input_discour" type="radio" name="radio" value="Monologue"> Monologue<span class="checkmark"></span></label>
+                  <label class="label_discour"><input class="input_discour" type="radio" name="radio" value="Interaction"> Interaction<span class="checkmark"></span></label>
+                  <label class="label_discour"><input class="input_discour" type="radio" name="radio" value="Je ne sais pas"> Je ne sais pas<span class="checkmark"></span></label>
+                  <div class="form-group">
+                    <input class="form-control" type="hidden" id="genre_de_discours" name="genre_de_discours">
+                  </div>
+                  <br>
+                  <div class="form-group">
+                      <label for="name" style="font-size:20px;"> Charger la vidéo :</label>
+                      <input type="file" class="form-control" id="file" name="file" required>
+                  </div>
+                  <button type="submit" class="btn btn-lg btn-success pull-right" id="btnContactUs" style="text-align:center;">Post It! &rarr;</button>
+              </form>
+              <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Sent your message successfully!</h3> </div>
+              <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+          </div>
+      </div>
+      <br/>
+      <hr>
+
+    </br>
+    <h1><a style="color:#ed6e4e; ">I</a>ls nous soutiennent</h1></br></br>
+    <div class="row" style="text-align:center;">
+      <a href="http://www.culturecommunication.gouv.fr/Politiques-ministerielles/Langue-francaise-et-langues-de-France"><img src="./assets/img/footer/Logo_culture.jpg" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.modyco.fr/fr/"><img src="./assets/img/footer/Logo_modyco.png" class="img-rounded" id="footerimg"></a>
+      <a href="https://www.ortolang.fr/market/home"><img src="./assets/img/footer/Logo_ortolang.png" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.univ-paris3.fr/"><img src="./assets/img/footer/Logo_paris3_niou.jpg" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.parisnanterre.fr/"><img src="./assets/img/footer/Logo_paris10.png" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.sorbonne-paris-cite.fr/fr"><img src="./assets/img/footer/Logo_pariscite.png" class="img-rounded" id="footerimg"></a>
+      <hr>
+      <p>Valange est un site collaboratif permettant de rassembler un large corpus d’extraits vidéo d’enfants filmés au cours d’études ponctuelles ou longitudinales. Ces études portent sur l’acquisition du langage par des jeunes locuteurs de 0 à 7 ans, entendants et sourds, monolingues et bilingues. Nunc tincidunt justo nulla, ac tincidunt odio fringilla posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper eros lectus, non elementum tortor tristique in. Quisque id fermentum ante. Sed dui enim, semper eget tellus sit amet, cursus malesuada ipsum. Proin in ante commodo, commodo libero et, accumsan orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus ac sodales ante. Curabitur non egestas dui, et tempus sapien.</p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Nous vous le savons.</h4>
+          </div>
+          <div class="modal-body">
+            <p>Se préparer au service.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </div> <!-- /container -->
+
+    <div id="footer">
+      <div class="container">
+        <p>&copy; Copyright 2018</p>
+        <p class="muted credit">This website made by <a href="http://stat34.github.io/Seongmin/">Seongmin</a>, Ilaine and Constance.</p>
+      </div>
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>-->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    function printagreeValue() {
+      //console.log(this.value);
+        var x = document.getElementById("agree");
+        x.value = this.value;
+    }
+    function printgenreValue() {
+      //console.log(this.value);
+        var x = document.getElementById("genre");
+        x.value = this.value;
+    }
+    function printdiscourValue() {
+      //console.log(this.value);
+        var x = document.getElementById("genre_de_discours");
+        x.value = this.value;
+    }
+    function printfrançaisValue() {
+      //console.log(this.value);
+        var x = document.getElementById("langue_français");
+        x.value = this.value;
+    }
+    function printanglaisValue() {
+      //console.log(this.value);
+        var x = document.getElementById("langue_anglais");
+        x.value = this.value;
+    }
+    function printitalienValue() {
+      //console.log(this.value);
+        var x = document.getElementById("langue_italien");
+        x.value = this.value;
+    }
+    function printportugaisValue() {
+      //console.log(this.value);
+        var x = document.getElementById("langue_portugais");
+        x.value = this.value;
+    }
+    function printautreValue() {
+      //console.log(this.value);
+        var x = document.getElementById("langue_autre");
+        x.value = this.value;
+    }
+    //함수
+
+    d3.selectAll(".checkbox_agreement").on("change", printagreeValue);
+    d3.selectAll(".input_genre").on("change", printgenreValue);
+    d3.selectAll(".input_discour").on("change", printdiscourValue);
+    d3.selectAll(".checkbox_langue_français").on("change", printfrançaisValue);
+    d3.selectAll(".checkbox_langue_anglais").on("change", printanglaisValue);
+    d3.selectAll(".checkbox_langue_italien").on("change", printitalienValue);
+    d3.selectAll(".checkbox_langue_portugais").on("change", printportugaisValue);
+    d3.selectAll(".checkbox_langue_autre").on("change", printautreValue);
+
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="./assets/js/bootstrap-transition.js"></script>
+    <script src="./assets/js/bootstrap-alert.js"></script>
+    <script src="./assets/js/bootstrap-modal.js"></script>
+    <script src="./assets/js/bootstrap-dropdown.js"></script>
+    <script src="./assets/js/bootstrap-scrollspy.js"></script>
+    <script src="./assets/js/bootstrap-tab.js"></script>
+    <script src="./assets/js/bootstrap-tooltip.js"></script>
+    <script src="./assets/js/bootstrap-popover.js"></script>
+    <script src="./assets/js/bootstrap-button.js"></script>
+    <script src="./assets/js/bootstrap-collapse.js"></script>
+    <script src="./assets/js/bootstrap-carousel.js"></script>
+    <script src="./assets/js/bootstrap-typeahead.js"></script>
+    <script src="./assets/js/bootstrap-affix.js"></script>
+
+    <script src="./assets/js/holder/holder.js"></script>
+    <script src="./assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="./assets/js/application.js"></script>
+
+  </body>
+</html>

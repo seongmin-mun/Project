@@ -1,0 +1,6 @@
+<p>Si vous utilisez cette vidéo dans le cadre d’une présentation ou d’un article, veuillez utiliser la référence bibliographique appropriée.</p>
+
+<ul>
+<li>Morgenstern, A. & Parisse, C. (Eds.), (2017). <a href="http://psn.univ-paris3.fr/ouvrage/le-langage-de-lenfant-de-leclosion-lexplosion">Le langage de l’enfant. De l’éclosion à l’explosion</a>. Paris : Presses de la Sorbonne Nouvelle.</li>
+<li>Morgenstern, A. & Parisse, C., (2012). <a href="http://journals.cambridge.org/action/displayJournal?jid=JFL">The Paris Corpus</a>. Journal of French Language Studies, Cambridge University Press (CUP), 22 (Special issue 1), pp.7-12.</li>
+</ul>

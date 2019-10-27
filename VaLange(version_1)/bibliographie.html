@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="./assets/img/icon.png" rel="shortcut icon">
+    <title>Valange</title>
+    <!-- Le styles -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+      .video {
+        width:80%;
+        min-height:300px;
+        margin-left:10%;
+      }
+      .btn img {
+          display: inline-block;
+          vertical-align: middle;
+          padding: 5px;
+          border-radius: 5px;
+      }
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+      img#footerimg {
+        height: 65px;
+        margin-left: 1%;
+        margin-right: 1%;
+      }
+    </style>
+    <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="./assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="./assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div id="mainNav" class="navbar navbar-inverse navbar-fixed-top">  <!--inverse // defalut-->
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar navbar-fixed-top" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Valange</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="./valange.html">À propos</a></li>
+              <li><a href="./rechercher.html">Rechercher une vidéo</a></li>
+              <li><a href="./proposer.html">Proposer une vidéo</a></li>
+              <li><a href="./contact_re.html">Nous contacter</a></li>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="">Français</a></li>
+                  <li><a href="" onclick="alert('Se préparer au service.')">Anglais</a></li>
+                  <li><a href="" onclick="alert('Se préparer au service.')">Coréen</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>-->
+            </ul>
+            <form class="navbar-form pull-right">
+              <button type="submit" class="btn" data-toggle="modal" data-target="#myModal" ><img class="media-object" src="./assets/img/Eng.png" style="width:20px;">Anglais</button>
+            </form>
+            <!--<form class="navbar-form pull-right">
+              <input type="text" class="input-medium search-query" placeholder="Entrez votre mot-clé *">
+              <button type="submit" class="btn" style="margin-right: 5px;"><i class="fa fa-fw fa-search"></i> Recherche</button>
+            </form>-->
+            <!--Google translation
+            <form class="navbar-form pull-right">
+              <div id="google_translate_element"></div>
+            </form>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="media">
+        <a class="pull-left" href="./index.html">
+          <img class="media-object" src="./assets/img/Logo.png" style="width:50%;"><!--data-src="holder.js/64x64" src="./assets/img/Logo.png" >-->
+        </a>
+        <!--<div class="media-body">
+          <h4 class="media-heading">Media heading</h4>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>-->
+      </div><br>
+
+      <hr>
+
+      <div class="tabbable"> <!-- Only required for left/right tabs -->
+        <ul class="nav nav-tabs">
+          <li><a href="./valange.html">Valange</a></li>
+          <li><a href="./ortolang.html">Projets Ortolang</a></li>
+          <li><a href="./nosequipes.html">Nos équipes</a></li>
+          <li class="active"><a href="./bibliographie.html" data-toggle="tab">Bibliographie et liens</a></li>
+        </ul>
+        <div class="tab-content">
+          <!--<div class="tab-pane active" id="tab1">
+            <p>I'm in Section 1.</p>
+          </div>
+          <div class="tab-pane" id="tab2">
+            <p>Howdy, I'm in Section 2.</p>
+          </div>-->
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span5">
+            <h1><a style="color:#ed6e4e; ">B</a>ibliographie</h1>
+          </div>
+          <div class="span7">
+            <p class="lead">Nous rassemblons ici des ressources multimédia, universitaires et grand public, liées à l'acquisition du langage. Cette liste n'a pas vocation à être exhaustive. N'hésitez pas à nous écrire pour nous suggérer une publication qui aurait sa place ici !</p>
+            </div>
+        </div>
+      </div>
+      <br/>
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <h3>POUR ALLER PLUS LOIN</h3><br>
+          <div class="span12">
+            <ul>
+              <p>Si vous voulez approfondir ce que vous avez aimé dans la vidéopédia et découvrir des analyses détaillées des extraits :</p>
+              <li><b>Morgenstern, A. & Parisse, C. (Eds.)</b> (2017).
+              <a onclick="window.open(this.href); return false;" href="http://psn.univ-paris3.fr/ouvrage/le-langage-de-lenfant-de-leclosion-lexplosion"><i>Le langage de l’enfant. De l’éclosion à l’explosion.</i></a>
+              Paris : Presses de la Sorbonne Nouvelle.</li>
+              <br>
+              <p> Pour les enfants et leurs parents, un album jeunesse :</p>
+              <li><b>Morgenstern, A. ; Morgenstern, S. & Bloch, S.</b> (2019).
+              <a onclick="window.open(this.href); return false;" href=https://livre.fnac.com/a12965411/Aliyah-Morgenstern-La-la-langue-Comment-tu-as-appris-a-parler"><i>La la Langue. Comment tu as appris à parler.</i></a> 
+              Paris : Saltimbanque.</li>
+              <br>
+              <p> Un article de presse paru dans <i>The Conversation</i>, média indépendant fondé sur du contenu produit par la communauté universitaire.</p>
+              <li><a onclick="window.open(this.href); return false;" href="https://theconversation.com/comment-les-adultes-transmettent-le-langage-aux-enfants-107830">"Comment les adultes transmettent le langage aux enfants ?"</a></li>
+          </ul><br>
+          </div>
+            
+          <h3>DOCUMENTAIRES</h3><br>
+          <div class="span12">
+            <ul>
+              <p> Réalisé par Valérie Deschênes et produit par Aliyah Morgenstern. Sorbonne Nouvelle Université : <a onclick="window.open(this.href); return false;" href=#"><i>Le chemin des mots.</i></a>
+              <br>
+              <p> Réalisés par Olivier Segard et Aliyah Morgenstern. Produit par Aliyah Morgenstern. Sorbonne Nouvelle Université :
+              <li><a onclick="window.open(this.href); return false;" href=#"><i>Je m'ai trompé.</a></i></li>
+              <li><a onclick="window.open(this.href); return false;" href=#"><i>Non, non et non.</a></i></li>
+              <li><a onclick="window.open(this.href); return false;" href=#"><i>Prélude à la parole.</a></i></li>
+              <li><a onclick="window.open(this.href); return false;" href=#"><i>Rires de Théophile.</a></i></li>
+              <li><a onclick="window.open(this.href); return false;" href=#"><i>The Pointing Variations.</a></i></li>
+            </ul><br>
+          </div>
+                
+          <h3>WEBOGRAPHIE</h3><br>
+          <div class="span12">
+            <ul>
+                <p>Tous les sites de nos autres projets :</p>
+                <li><a onclick="window.open(this.href); return false;" href=http://colaje.scicog.fr"><i>CoLaJE</a></i></li>
+                <li><a onclick="window.open(this.href); return false;" href=http://prosigne.ortolang.fr"><i>ProSigne</a></i></li>
+                <li><a onclick="window.open(this.href); return false;" href=http://enflang.ortolang.fr"><i>EnfLang</a></i></li>
+                <li><a onclick="window.open(this.href); return false;" href=http://anr-leonard.ens-lsh.fr"><i>Léonard</a></i></li>
+       </ul><br>
+          </div>
+          <h3>ARTICLES</h3><br>
+          <div class="span12">
+            <ul>
+              <li><b>Caët, S. & Morgenstern, A.</b> (2015).
+              <a onclick="window.open(this.href); return false;" href="https://kb.osu.edu/bitstream/handle/1811/81322/WPL_35_May_1987_117.pdf">
+              First and second person pronouns in two mother-child dyads.</a>
+              In Laure Gardelle & Sandrine Sorlin (Eds.),
+              <i>The pragmatics of personal pronouns.</i> John Benjamins Publishing,
+              Amsterdam-London, pp. 173-193. </li>
+              <li><b>Dodane, C. & Martel, K.</b> (2009).
+              <a onclick="window.open(this.href); return false;" href="biblio/DodaneeMartel2010-Enfance.pdf">
+              Évolution de l'inventaire de contours de Fo chez deux enfants français de 10 à 12 mois
+              : l'importance du contexte pour décrire le stade pré-linguistique.</a> <i>Enfance </i>
+              (Quand l'enfant prend la parole : numéro coordonné par Karine Martel),
+              61, 3, 305-316.</li>
+              <li><b>Morgenstern A.</b> (2006)
+              <i>Un JE en construction. Ontogenèse de l’auto-désignation chez l’enfant.</i>
+              Bibliothèque de Faits de langues. Paris Ophrys.</li>
+              <li><b>Morgenstern A.</b> (2009)
+              <i>L’enfant dans la langue.</i> Paris : Presses de la Sorbonne Nouvelle.</li>
+              <li><b>Morgenstern, A.</b> (2007),
+              <a onclick="window.open(this.href); return false;" href="biblio/Discours_repris-discours_emprunté.pdf">
+              Discours repris, discours emprunté, discours habité chez l’enfant entre 1 et 3 ans.</a>
+              <i>Revista do Gel</i>, 04, N°2. pp. 171-188.</li>
+              <li><b>Morgenstern, A.</b> (2012).
+              <a onclick="window.open(this.href); return false;" href="biblio/The_self_as_other.pdf">
+              The self as Other: Selfwords and pronominal reversals in language acquisition.</a>
+              In Lorda & Zabalbeascoa eds., <i>Spaces of Polyphony, "Dialogue Studies"</i>,
+              John Benjamins Publishing, Amesterdam-London, p. 57-72.</li>
+              <li><b>Morgenstern, A.</b> (2014).
+              <a onclick="window.open(this.href); return false;" href="biblio/Shared_attention.pdf">
+              Shared attention, gaze and pointing gestures in hearing and deaf children in Inbal Arnon, </a>
+              Marisa Casillas, Chigusa Kurumada & Bruno Estigarribia (Eds.),
+              <i>Language in Interaction. Studies in honor of Eve V. Clark.</i> Amsterdam/Philadelphia:
+              John Benjamins.139-156.</li>
+              <li><b>Morgenstern, A.</b> (2014).
+              <a onclick="window.open(this.href); return false;" href="biblio/Intentional_communication.pdf">
+              Intentionality in Language and Communications.</a> In James D. Wright (Ed.).
+              <i>International Encyclopedia of the Social and Behavioral Sciences.</i> Elsevier.</li>
+              <li><b>Morgenstern, A.</b> (2014).
+              <a onclick="window.open(this.href); return false;" href="biblio/AliyahMorgenstern-copie.pdf">
+              Je comme un autre. Les premiers récits autobiographiques chez l’enfant.</a>
+              In Natalie Depraz (ed.). <i>Première, deuxième, troisième personne.</i> Bucarest : Zeta books.
+              234-251.</li>
+              <li><b>Morgenstern, A.</b> (2014).
+                <a onclick="window.open(this.href); return false;" href="biblio/Multimodal_language_development.pdf">
+              Children’s multimodal language development.</a> In Christiane Fäcke (ED.).
+              <i>Manual of language acquisition.</i> Berlin/Boston: De Gruyter.123-142. </li>
+              <li><b>Egger, V.</b> (1881). <i>La Parole intérieure. Essai de psychologie descriptive,</i> Paris: Germer Baillière.</li>
+              <li><b>Nelson, K.</b> (ed.) (1989). <i>Narratives from the crib.</i> Harvard University Press.
+              <a onclick="window.open(this.href); return false;" href="https://books.google.fr/books?id=KeOumdZyeNwC&printsec=frontcover&dq=Nelson,Narratives+from+the+crib&hl=fr&sa=X&redir_esc=y#v=onepage&q=Nelson%2CNarratives%20from%20the%20crib&f=false">
+              <span class="glyphicon glyphicon-book" aria-hidden="true"></span></a></li>
+              <li><b>Piaget, J.</b> (1967). <i>Biologie et connaissances.</i> Paris; Gallimard.</li>
+              <li><b>Piaget, J.</b> (1923). <i>Le langage et la pensée,</i> Neuchâtel, Delachaux et Niestlé.
+              <a onclick="window.open(this.href); return false;" href="https://books.google.fr/books?id=WYoEXQLGRLEC&printsec=frontcover&hl=fr&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false">
+              <span class="glyphicon glyphicon-book" aria-hidden="true"></span></a></li>
+              <li><b>Slobin, D.</b> (2014). From speech with others to speech for self. A case study of "externalized drama".
+              <i>Language in Interaction. Studies in honor of Eve V. Clark.</i> Edited by Inbal Arnon, Marisa Casillas, Chigusa
+              Kurumada and Bruno Estigarribia. John Benjamins.</li>
+              <li><b>Vygotski, L.</b> (1934-1997). <i>Pensée et langage.</i> Traduction de Françoise Sève. Paris: La dispute.</li>
+              <li><b>Zivin, G.</b> (Ed.) (1979). <i>The development of self-regulation through private speech.</i> New York: Wiley.</li>
+              <li><strong>Blondel, M.</strong> (2005). Une entrée pas à pas dans la LSF: un bref aperçu linguistique de la LSF et de son acquisition. <em>Education et Sociétés Plurilingues</em>, 18, 41-54.</li>
+              <li><strong>Blondel, M.</strong> (2009). Acquisition bilingue LSF-français : L'enfant qui grandit avec deux langues et dans deux modalités. <em>Acquisition et interaction en langue étrangère</em>, (Aile... Lia 1), 169‑194.</li>
+              <li><strong>Blondel M., Tuller, L & Lecourt, I. </strong> (2004). “Les “pointés” et l’acquisition de la morphosyntaxe en LSF ”. <em> In BERTHONNEAU, A-M. & DAL, G. (eds), La linguistique de la LSF : recherches actuelles.</em> Silexicales 4, Lille3, 17-32.</li>
+              <li><strong>Blondel, M. & Tuller, L.</strong> (2008). Pointing in bimodal bilingual acquisition: a longitudinal study of LSF-French bilingual child. <em>Leading Research in Sign Language: Selected Papers from TISLR 2004</em>.</li>
+              <li><strong>Blondel, M., Morgenstern, A., Beaupoil, P., Benazzo, S., Boutet, D., Caët, S. & Limousin, F.</strong> (2011). <em>The blossoming of negation in gesture, sign and vocal productions</em>. Présenté à ADYLOC, Paris.</li>
+              <li><strong>Blondel, M. & Tuller, L.</strong> (2000). La recherche sur la LSF: un compte rendu critique. <em>Recherches linguistiques de Vincennes</em>, (29), 29–54.</li>
+              <li><strong>Courtin, C., Limousin, F. & Morgenstern, A. </strong>(2010). Evaluer les competences linguistiques des enfants en langue des signes francaise: Une experience pionniere. <em>Language, Interaction and Acquisition/Langage, Interaction et Acquisition</em>, 1(1), 129–158.</li>
+              <li><strong>Jacob, S.</strong> (2003). L'acquisition du langage par l'enfant sourd: Langue des signes fran\ccaise (LSF): Enjeux culturels et pédagogiques. <em>La Nouvelle revue de l'adaptation et de la scolarisation</em>, (23), 31–42.</li>
+              <li><strong>Jacob, S.</strong> (2012). Les structures de grande iconicité comme miroir du développement des capacités narratives. <em>Récits d'enfants: Développement, genre, contexte</em>, 35.</li>
+              <li><strong>Limousin, F.</strong> (2011). <em>Acquisition de la référence personnelle en LSF : Analyse longitudinale des pointages, des formes nulles et des noms signés chez une enfant sourde de parents sourds</em>. Thèse de doctorat. Université Paris 8.</li>
+              <li><strong>Limousin, F.</strong> (2009). Les premiers pointages personnels d'un enfant sourd.<em> Actes du colloque AcquisiLyon 09, Lyon, 3 et 4 décembre 2009.</em></li>
+              <li><strong>Limousin, F. & Blondel, M.</strong> (2010). Prosodie et acquisition de la langue des signes française&nbsp;: Acquisition monolingue LSF et bilingue LSF-français. <em>Language, Interaction and Acquisition/Langage, Interaction et Acquisition</em>, 1(1), 82–109.</li>
+              <li><strong>Morgenstern, A.</strong> (1997). L'enfant sourd énonciateur signeur: l'auto-désignation chez l'enfant en Langue des Signes française. <em>Lidil</em>, 19, 119–141.</li>
+              <li><strong>Morgenstern, A. & Bendayan, M.</strong> (1995). L'acquisition de l'exclamation en langue des signes française : quelques intuitions... <em>Faits de langues</em>, 3(6), 57‑62.</li>
+              <li><strong>Morgenstern, A., Caët, S., Collombel-Leroy, M., Limousin, F. & Blondel, M.</strong> (2010). From gesture to sign and from gesture to word: Pointing in deaf and hearing children. <em>Gesture</em>, 10(2-3), 172‑202.</li>
+              <li><strong>Morgenstern, A., Mathiot, E., Leroy, M. & Limousin, F. </strong>(2009). Premiers Pointages chez L'enfant entendant et L'enfant sourd-signeur: deux suivis longitudinaux entre 7 mois et 1 an 7 mois.</li>
+              <li><strong>Sallandre, M.-A. & Blondel, M. </strong>(Eds). Acquisition d’une langue des signes comme langue première / Acquiring sign language as a first language. <em> </em>Special Issue of Language, Interaction and Acquisition 1:1.</li>
+              <li><strong>Sallandre, M.-A. & Schoder, C. </strong>(s. d.). Acquisition des références actantielle et spatiale en langue des signes française. À consulter à l'adresse <a href="http://www.umr7023.cnrs.fr/sites/sfl/IMG/pdf/Orizons_Sallandre_Schoder_2011.pdf" target="_blank">http://www.umr7023.cnrs.fr/sites/sfl/IMG/pdf/Orizons_Sallandre_Schoder_2011.pdf</a></li>
+              <li><strong>Tuller L., Blondel M. & Niederberger N.</strong> (2007). Growing up in French and French Sign Language. <em>In AYOUN Dalila, Handbook of French Applied Linguistics, John Benjamins P. C</em>, pp 334-376.</li>
+            </ul><br>
+          </div>
+          <br><h3>OUVRAGES</h3><br>
+          <div class="span12">
+            <ul>
+              <li><strong>Estève, I.</strong> (2011). <em>Approches bilingue et multimodale de la construction langagière chez l'enfant sourd - De l'oralité à la scripturalité : quels étayages mutuels ?</em> Thèse de doctorat.</li>
+              <li><strong>Duhayer, V., Frumholz, M., & Garcia, B.</strong> (2006). Acquisition du langage chez l'enfant sourd: quelle oralité pour quel accès à l'écrit&nbsp;? <em>Acquisition&nbsp;: implications didactiques, Mélanges CRAPEL</em>, (29), 111–129.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br/>
+    <br>
+    <h1><a style="color:#ed6e4e; ">I</a>ls nous soutiennent</h1><br><br>
+    <div class="row" style="text-align:center;">
+      <a href="http://www.culturecommunication.gouv.fr/Politiques-ministerielles/Langue-francaise-et-langues-de-France"><img src="./assets/img/footer/Logo_culture.jpg" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.modyco.fr/fr/"><img src="./assets/img/footer/Logo_modyco.png" class="img-rounded" id="footerimg"></a>
+      <a href="https://www.ortolang.fr/market/home"><img src="./assets/img/footer/Logo_ortolang.png" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.univ-paris3.fr/"><img src="./assets/img/footer/Logo_paris3_niou.jpg" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.parisnanterre.fr/"><img src="./assets/img/footer/Logo_paris10.png" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.sorbonne-paris-cite.fr/fr"><img src="./assets/img/footer/Logo_pariscite.png" class="img-rounded" id="footerimg"></a>
+      <hr>
+      <p>Valange est un site collaboratif permettant de rassembler un large corpus d’extraits vidéo d’enfants filmés au cours d’études ponctuelles ou longitudinales. Ces études portent sur l’acquisition du langage par des jeunes locuteurs de 0 à 7 ans, entendants et sourds, monolingues et bilingues. Nunc tincidunt justo nulla, ac tincidunt odio fringilla posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper eros lectus, non elementum tortor tristique in. Quisque id fermentum ante. Sed dui enim, semper eget tellus sit amet, cursus malesuada ipsum. Proin in ante commodo, commodo libero et, accumsan orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus ac sodales ante. Curabitur non egestas dui, et tempus sapien.</p>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Version anglaise de VaLangE - English version of VaLangE</h4>
+          </div>
+          <div class="modal-body">
+            <p>VaLangE est un bébé projet : il faudra patienter encore un peu avant qu'il devienne parfaitement bilingue. <br>
+              <br>
+              VaLangE is a baby project and is still acquiring the English language. Come back soon to watch it become a fully bilingual website!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div> <!-- /container -->
+    <div id="footer">
+      <div class="container">
+        <p>&copy; Copyright 2018</p>
+        <p class="muted credit">This website made by <a href="http://stat34.github.io/Seongmin/">Seongmin</a>, Ilaine and Constance.</p>
+      </div>
+    </div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>-->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap-transition.js"></script>
+    <script src="./assets/js/bootstrap-alert.js"></script>
+    <script src="./assets/js/bootstrap-modal.js"></script>
+    <script src="./assets/js/bootstrap-dropdown.js"></script>
+    <script src="./assets/js/bootstrap-scrollspy.js"></script>
+    <script src="./assets/js/bootstrap-tab.js"></script>
+    <script src="./assets/js/bootstrap-tooltip.js"></script>
+    <script src="./assets/js/bootstrap-popover.js"></script>
+    <script src="./assets/js/bootstrap-button.js"></script>
+    <script src="./assets/js/bootstrap-collapse.js"></script>
+    <script src="./assets/js/bootstrap-carousel.js"></script>
+    <script src="./assets/js/bootstrap-typeahead.js"></script>
+    <script src="./assets/js/bootstrap-affix.js"></script>
+    <script src="./assets/js/holder/holder.js"></script>
+    <script src="./assets/js/google-code-prettify/prettify.js"></script>
+    <script src="./assets/js/application.js"></script>
+  </body>
+</html>

@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="./assets/img/icon.png" rel="shortcut icon">
+    <title>Valange</title>
+
+    <!-- Le styles -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/bootstrap-slider.css" rel="stylesheet">
+    <link href="./assets/css/multirange.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="./data/json/file.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+      .video {
+        width:80%;
+        min-height:300px;
+        margin-left:10%;
+      }
+      .btn img {
+          display: inline-block;
+          vertical-align: middle;
+          padding: 5px;
+          border-radius: 5px;
+      }
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      .filterbtn{
+        width:16%;
+        padding-right: 3%;
+        padding-left: 3%;
+        background: white;
+        border-color: white;
+      }
+
+      #slider_my {
+        width:1000px;
+      }
+      @media (max-width: 1100px) {
+        #slider_my {
+          width:700px;
+        }
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        #slider_my {
+          width:300px;
+        }
+      }
+      img#footerimg {
+        height: 65px;
+      	margin-left: 1%;
+      	margin-right: 1%;
+      }
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+      }
+
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+
+      /* The container */
+      .container_cb {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default checkbox */
+      .container_cb input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .container_cb:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+
+      /* When the checkbox is checked, add a blue background */
+      .container_cb input:checked ~ .checkmark {
+        background-color: #2196F3;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .container_cb input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the checkmark/indicator */
+      .container_cb .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      output {
+        position: absolute;
+        background-image: linear-gradient(#444444, #999999);
+        width: 40px;
+        height: 30px;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+        display: inline-block;
+        font: bold 15px/30px Georgia;
+        bottom: 175%;
+        left: 0;
+      }
+      output:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 10px solid #999999;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        margin-top: -1px;
+      }
+
+    </style>
+    <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="./assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="./assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div id="mainNav" class="navbar navbar-inverse navbar-fixed-top">  <!--inverse // defalut-->
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar navbar-fixed-top" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Valange</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="./valange.html">À propos</a></li>
+              <li class="active"><a href="./rechercher.html">Rechercher une vidéo</a></li>
+              <li><a href="./proposer.html">Proposer une vidéo</a></li>
+              <li><a href="./contact_re.html">Nous contacter</a></li>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="">Français</a></li>
+                  <li><a href="" onclick="alert('Se préparer au service.')">Anglais</a></li>
+                  <li><a href="" onclick="alert('Se préparer au service.')">Coréen</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>-->
+            </ul>
+            <form class="navbar-form pull-right">
+              <button type="submit" class="btn" data-toggle="modal" data-target="#myModal" ><img class="media-object" src="./assets/img/Eng.png" style="width:20px;">Anglais</button>
+            </form>
+            <!--<form class="navbar-form pull-right">
+              <input type="text" class="input-medium search-query" placeholder="Entrez votre mot-clé *">
+              <button type="submit" class="btn" style="margin-right: 5px;"><i class="fa fa-fw fa-search"></i> Recherche</button>
+            </form>-->
+            <!--Google translation
+            <form class="navbar-form pull-right">
+              <div id="google_translate_element"></div>
+            </form>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span4">
+            <a class="pull-left" href="./index.html">
+              <img class="media-object" src="./assets/img/Logo2.png" style="width:60%;"><!--data-src="holder.js/64x64" src="./assets/img/Logo.png" >-->
+            </a>
+          </div>
+          <div class="span8">
+            <br/><input type="text" id="myInput" onkeyup="mykeyFunction()" placeholder="Rechercher une vidéo, Nom de l'extrait *" title="mot-clé" style="width:80%; height:40px;"> <i class="fa fa-fw fa-search" style="font-size:35px!important; margin:1%;"></i>
+            </div>
+        </div>
+      </div><br/>
+
+      <hr>
+
+    </br>
+
+    <h1><a style="color:#ed6e4e; ">P</a>arcourir les vidéos</h1><p style="text-align:center;">Veuillez sélectionner au moins un critère pour afficher les vidéos correspondantes.</p>
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
+      <ul class="nav nav-tabs">
+        <li class="active" style="width:20%;"><a href="#theme" data-toggle="tab"><img class="media-object" src="./assets/img/Filter/theme_re.png" style="padding-left: 15%;width:70%;"></a></li>
+        <li style="width:20%;"><a href="#age" data-toggle="tab"><img class="media-object" src="./assets/img/Filter/age_re.png" style="padding-left: 15%;width:70%;"></a></li>
+        <li style="width:20%;"><a href="#activite" data-toggle="tab"><img class="media-object" src="./assets/img/Filter/activite_re.png" style="padding-left: 15%;width:70%;"></a></li>
+        <li style="width:20%;"><a href="#langue" data-toggle="tab"><img class="media-object" src="./assets/img/Filter/langue_re.png" style="padding-left: 15%;width:70%;"></a></li>
+        <li style="width:20%;"><a href="#enfant" data-toggle="tab"><img class="media-object" src="./assets/img/Filter/enfant_re.png" style="padding-left: 15%;width:70%;"></a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="theme">
+          <div class="row">
+            <div class="span6">
+              <label class="container_cb">Émergence temporalité
+                <input class="checkbox_theme_émergence_temporalité" type="checkbox" value="theme,émergence_temporalité">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Temporalité
+                <input class="checkbox_theme_temporalité" type="checkbox" value="theme,temporalité">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Bilinguisme
+                <input class="checkbox_theme_bilinguisme" type="checkbox" value="theme,bilinguisme">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Babillage
+                <input class="checkbox_theme_babillage" type="checkbox" value="theme,babillage">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Monologue
+                <input class="checkbox_theme_monologue" type="checkbox" value="theme,monologue">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Mouvement
+                <input class="checkbox_theme_mouvement" type="checkbox" value="theme,mouvement">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Énoncés complexes
+                <input class="checkbox_theme_énoncés_complexes" type="checkbox" value="theme,énoncés_complexes">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Erreurs
+                <input class="checkbox_theme_erreurs" type="checkbox" value="theme,erreurs">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Syntaxe
+                <input class="checkbox_theme_syntaxe" type="checkbox" value="theme,syntaxe">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Figurines
+                <input class="checkbox_theme_figurines" type="checkbox" value="theme,figurines">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Étayage
+                <input class="checkbox_theme_étayage" type="checkbox" value="theme,étayage">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span6">
+              <label class="container_cb">Référence à soi
+                <input class="checkbox_theme_référence_à_soi" type="checkbox" value="theme,référence_à_soi">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Rituel
+                <input class="checkbox_theme_rituel" type="checkbox" value="theme,rituel">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Premiers_mots
+                <input class="checkbox_theme_premiers_mots" type="checkbox" value="theme,premiers_mots">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Pointage
+                <input class="checkbox_theme_pointage" type="checkbox" value="theme,pointage">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Ballon
+                <input class="checkbox_theme_ballon" type="checkbox" value="theme,ballon">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Humour
+                <input class="checkbox_theme_humour" type="checkbox" value="theme,humour">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Tour
+                <input class="checkbox_theme_tour" type="checkbox" value="theme,tour">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Etayage
+                <input class="checkbox_theme_etayage" type="checkbox" value="theme,etayage">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Poupée
+                <input class="checkbox_theme_poupée" type="checkbox" value="theme,poupée">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Première_syntaxe
+                <input class="checkbox_theme_première_syntaxe" type="checkbox" value="theme,première_syntaxe">
+                <span class="checkmark"></span>
+              </label>
+           </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="age">
+          <div class="row" style="text-align:center;">
+            <div class="span12">
+            </br>
+              <label style="font-size:22px;">0 <input id="slider_my" type="range" min="0" max="8" multiple value="0,0" list="tickmarks" onchange="printValue('slider_my','rangeValue_my')"/> 8+</label><br>
+              <datalist id="tickmarks">
+                <option value="0">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                <option value="6">
+                <option value="7">
+                <option value="8">
+              </datalist>
+              <input id="rangeValue_my" type="hidden" size="5" placeholder="0,0"/>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="activite">
+          <div class="row" style="text-align:center;">
+            <div class="span3">
+              <a><img src="./assets/img/exam.png" class="img-circle" style="width:70%;"></a>
+              <h3>Jeux</h3>
+              <label class="container_cb">Jeu de construction
+                <input class="checkbox_activite_jeu_de_construction" type="checkbox" value="activite,jeu_de_construction">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Jeu en extérieur
+                <input class="checkbox_activite_jeu_en_extérieur" type="checkbox" value="activite,jeu_en_extérieur">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Jeu de société
+                <input class="checkbox_activite_jeu_de_société" type="checkbox" value="activite,jeu_de_société">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">poupée, peluche, figurines
+                <input class="checkbox_activite_poupée_peluche_figurines" type="checkbox" value="activite,poupée_peluche_figurines">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Jeu symbolique
+                <input class="checkbox_activite_jeu_symbolique" type="checkbox" value="activite,jeu_symbolique">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Jeu technologique
+                <input class="checkbox_activite_jeu_technologique" type="checkbox" value="activite,jeu_technologique">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Jeu autre
+                <input class="checkbox_activite_jeu_autre" type="checkbox" value="activite,jeu_autre">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span3">
+              <a><img src="./assets/img/exam.png" class="img-circle" style="width:70%;"></a>
+              <h3>Vie Quotidienne</h3>
+              <label class="container_cb">Soin
+                <input class="checkbox_activite_soin" type="checkbox" value="activite,soin">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Repas
+                <input class="checkbox_activite_repas" type="checkbox" value="activite,repas">
+                <span class="checkmark"></span>
+              </label>
+           </div>
+            <div class="span3">
+              <a><img src="./assets/img/exam.png" class="img-circle" style="width:70%;"></a>
+              <h3>APPRENTISSAGES</h3>
+              <label class="container_cb">Devoirs
+                <input class="checkbox_activite_devoirs" type="checkbox" value="activite,devoirs">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Rangement
+                <input class="checkbox_activite_Rangement" type="checkbox" value="activite,Rangement">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Politesse
+                <input class="checkbox_activite_politesse" type="checkbox" value="activite,politesse">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Téléphone
+                <input class="checkbox_activite_téléphone" type="checkbox" value="activite,téléphone">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span3">
+              <a><img src="./assets/img/exam.png" class="img-circle" style="width:70%;"></a>
+              <h3>CREATIVITE</h3>
+              <label class="container_cb">Dessin
+                <input class="checkbox_activite_dessin" type="checkbox" value="activite,dessin">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Livre
+                <input class="checkbox_activite_livre" type="checkbox" value="activite,livre">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container_cb">Musique
+                <input class="checkbox_activite_musique" type="checkbox" value="activite,musique">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="langue">
+          <div class="row" style="text-align:center;">
+            <div class="span4">
+              <a><img src="./assets/img/Filter/Langue/FR.png" class="img-rounded" style="width:70%;"></a>
+              <label class="container_cb">Français
+                <input class="checkbox_langue_français" type="checkbox" value="langue,fr">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span4">
+              <a><img src="./assets/img/Filter/Langue/FR.png" class="img-rounded" style="width:70%;"></a>
+              <label class="container_cb">Français(italien)
+                <input class="checkbox_langue_français_italien" type="checkbox" value="langue,fr (it)">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span4">
+              <a><img src="./assets/img/Filter/Langue/IT.png" class="img-rounded" style="width:70%;"></a>
+              <label class="container_cb">Italien(français)
+                <input class="checkbox_langue_italien_français" type="checkbox" value="langue,it (fr)">
+                <span class="checkmark"></span>
+              </label>
+           </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="enfant">
+          <div class="row" style="text-align:center;">
+            <div class="span2">
+              <a><img src="./assets/img/exam.png" class="img-circle" id="nousimg"></a>
+              <label class="container_cb">Philippine
+                <input class="checkbox_enfant_philippine" type="checkbox" value="enfant,Philippine">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span2">
+              <a><img src="./assets/img/exam.png" class="img-circle" id="nousimg"></a>
+              <label class="container_cb">Théophile
+                <input class="checkbox_enfant_théophile" type="checkbox" value="enfant,Théophile">
+                <span class="checkmark"></span>
+              </label>
+           </div>
+            <div class="span2">
+              <a><img src="./assets/img/exam.png" class="img-circle" id="nousimg"></a>
+              <label class="container_cb">Anaé
+                <input class="checkbox_enfant_anaé" type="checkbox" value="enfant,Anae">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span2">
+              <a><img src="./assets/img/exam.png" class="img-circle" id="nousimg"></a>
+              <label class="container_cb">Gustavo
+                <input class="checkbox_enfant_gustavo" type="checkbox" value="enfant,Gustavo">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span2">
+              <a><img src="./assets/img/exam.png" class="img-circle" id="nousimg"></a>
+              <label class="container_cb">Madeleine
+                <input class="checkbox_enfant_madeleine" type="checkbox" value="enfant,Madeleine">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span2">
+              <a><img src="./assets/img/exam.png" class="img-circle" id="nousimg"></a>
+              <label class="container_cb">Ulysse
+                <input class="checkbox_enfant_ulysse" type="checkbox" value="enfant,Ulysse">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span2">
+              <a><img src="./assets/img/exam.png" class="img-circle" id="nousimg"></a>
+              <label class="container_cb">Julie
+                <input class="checkbox_enfant_julie" type="checkbox" value="enfant,Julie">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span2">
+              <a><img src="./assets/img/exam.png" class="img-circle" id="nousimg"></a>
+              <label class="container_cb">Antoine
+                <input class="checkbox_enfant_antoine" type="checkbox" value="enfant,Antoine">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="span2">
+              <a><img src="./assets/img/exam.png" class="img-circle" id="nousimg"></a>
+              <label class="container_cb">Antoine Bi
+                <input class="checkbox_enfant_antoine_bi" type="checkbox" value="enfant,Antoine Bil">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recherche_btn" style="text-align:center;">
+      </br><button type="submit" class="btn btn-large btn-info" onclick="checkedtotalValue(valange_data);"><i class="fa fa-fw fa-search"></i> Recherche</button></br>
+    </div>
+
+
+    <h1><a style="color:#ed6e4e; ">N</a>os suggestions</h1><p style="text-align:center;">Veuillez sélectionner au moins un critère pour afficher les vidéos correspondantes.</p>
+    <div class="row">
+      <div class="span12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Numéro</th>
+              <th>Nom de l'extrait</th>
+              <th>Enfant</th>
+              <th>Langue</th>
+              <th>Âge</th>
+              <th>thème</th>
+              <th>Activité</th>
+              <th>Bouton</th>
+            </tr>
+          </thead>
+          <tbody id="myUL">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    </br>
+    <h1><a style="color:#ed6e4e; ">I</a>ls nous soutiennent</h1></br></br>
+    <div class="row" style="text-align:center;">
+      <a href="http://www.culturecommunication.gouv.fr/Politiques-ministerielles/Langue-francaise-et-langues-de-France"><img src="./assets/img/footer/Logo_culture.jpg" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.modyco.fr/fr/"><img src="./assets/img/footer/Logo_modyco.png" class="img-rounded" id="footerimg"></a>
+      <a href="https://www.ortolang.fr/market/home"><img src="./assets/img/footer/Logo_ortolang.png" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.univ-paris3.fr/"><img src="./assets/img/footer/Logo_paris3_niou.jpg" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.parisnanterre.fr/"><img src="./assets/img/footer/Logo_paris10.png" class="img-rounded" id="footerimg"></a>
+      <a href="http://www.sorbonne-paris-cite.fr/fr"><img src="./assets/img/footer/Logo_pariscite.png" class="img-rounded" id="footerimg"></a>
+      <hr>
+      <p>Valange est un site collaboratif permettant de rassembler un large corpus d’extraits vidéo d’enfants filmés au cours d’études ponctuelles ou longitudinales. Ces études portent sur l’acquisition du langage par des jeunes locuteurs de 0 à 7 ans, entendants et sourds, monolingues et bilingues. Nunc tincidunt justo nulla, ac tincidunt odio fringilla posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper eros lectus, non elementum tortor tristique in. Quisque id fermentum ante. Sed dui enim, semper eget tellus sit amet, cursus malesuada ipsum. Proin in ante commodo, commodo libero et, accumsan orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus ac sodales ante. Curabitur non egestas dui, et tempus sapien.</p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Nous vous le savons.</h4>
+          </div>
+          <div class="modal-body">
+            <p>Se préparer au service.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </div> <!-- /container -->
+
+    <div id="footer">
+      <div class="container">
+        <p>&copy; Copyright 2018</p>
+        <p class="muted credit">This website made by <a href="http://stat34.github.io/Seongmin/">Seongmin</a>, Ilaine and Constance.</p>
+      </div>
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>-->
+    <script type="text/javascript">
+
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+
+    function mykeyFunction() {//<tbody id="myUL">id="myInput" onkeyup="mykeyFunction()"
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        tr = ul.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            a = tr[i].getElementsByTagName("td")[1];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+    function printValue(sliderID, textbox) {
+        var x = document.getElementById(textbox);
+        var y = document.getElementById(sliderID);
+        x.value = y.value;
+    }
+
+    function change_css1(){
+        document.getElementById('demo1').style.cssText = 'background-color:#b2b2ff; border:1px solid #0c0800;';
+    }
+
+    checkedtotalValue(valange_data);
+
+    function checkedtotalValue(data_total){
+
+      var datas = [];
+
+      if(data_total===valange_data){
+        datas.push(valange_data);
+      }
+
+      //enfant
+      var buttons_enfant = ['checkbox_enfant_philippine','checkbox_enfant_théophile','checkbox_enfant_anaé','checkbox_enfant_gustavo','checkbox_enfant_madeleine','checkbox_enfant_ulysse','checkbox_enfant_julie','checkbox_enfant_antoine','checkbox_enfant_antoine_bi'];
+      var data_class_enfant = []
+      for(var i = 0; i < buttons_enfant.length; i++){
+        if(checkedeachValue(buttons_enfant[i])!=='null'){
+          data_class_enfant.push(checkedeachValue(buttons_enfant[i]));
+        }
+      }
+
+      //langue
+      var buttons_langue = ['checkbox_langue_français','checkbox_langue_français_italien','checkbox_langue_italien_français'];
+      var data_class_langue = []
+      for(var i = 0; i < buttons_langue.length; i++){
+        if(checkedeachValue(buttons_langue[i])!=='null'){
+          data_class_langue.push(checkedeachValue(buttons_langue[i]));
+        }
+      }
+
+      //age
+      var age_data = document.getElementById("rangeValue_my").value;
+      //console.log("age_data : "+age_data);
+      var data_class_age = []
+      if(age_data.length!==0){
+        var range = age_data.split(",");
+        if(range[0]!==0){
+          //data_class_age.push(parseInt(range[0])-1);
+          for(i=(range[0]);i<=(range[1]);i++){
+            data_class_age.push(parseInt(i));
+            console.log("age_data : "+parseInt(i));
+          }
+          //data_class_age.push(parseInt(range[1])+1);
+        }
+      }
+
+      console.log("data_class_age : "+data_class_age);
+
+      //theme
+      var buttons_theme = ['checkbox_theme_émergence_temporalité','checkbox_theme_temporalité','checkbox_theme_bilinguisme','checkbox_theme_babillage','checkbox_theme_monologue','checkbox_theme_mouvement','checkbox_theme_énoncés_complexes','checkbox_theme_erreurs','checkbox_theme_syntaxe','checkbox_theme_figurines','checkbox_theme_étayage','checkbox_theme_référence_à_soi','checkbox_theme_rituel','checkbox_theme_premiers_mots','checkbox_theme_pointage','checkbox_theme_ballon','checkbox_theme_humour','checkbox_theme_tour','checkbox_theme_etayage','checkbox_theme_poupée','checkbox_theme_première_syntaxe'];
+      var data_class_theme = []
+      for(var i = 0; i < buttons_theme.length; i++){
+        if(checkedeachValue(buttons_theme[i])!=='null'){
+          data_class_theme.push(checkedeachValue(buttons_theme[i]));
+        }
+      }
+
+      //activite
+      var buttons_activite = ['checkbox_activite_jeu_de_construction','checkbox_activite_jeu_en_extérieur','checkbox_activite_jeu_de_société','checkbox_activite_poupée_peluche_figurines','checkbox_activite_jeu_symbolique','checkbox_activite_jeu_technologique','checkbox_activite_jeu_autre','checkbox_activite_soin','checkbox_activite_repas','checkbox_activite_devoirs','checkbox_activite_Rangement','checkbox_activite_politesse','checkbox_activite_téléphone','checkbox_activite_dessin','checkbox_activite_livre','checkbox_activite_musique'];
+      var data_class_activite = []
+      for(var i = 0; i < buttons_activite.length; i++){
+        if(checkedeachValue(buttons_activite[i])!=='null'){
+          data_class_activite.push(checkedeachValue(buttons_activite[i]));
+        }
+      }
+
+      var filterBy = {};
+
+      if(data_class_enfant.length > 0){
+        filterBy.enfant = data_class_enfant;
+      }
+      if(data_class_langue.length > 0){
+        filterBy.langue = data_class_langue;
+      }
+      if(data_class_theme.length > 0){
+        filterBy.theme = data_class_theme;
+      }
+      if(data_class_activite.length > 0){
+        filterBy.activite = data_class_activite;
+      }
+      if(data_class_age.length > 0){
+        filterBy.age = data_class_age;
+      }
+
+      //var filterBy = {enfant: data_class_enfant, langue: data_class_langue, theme: data_class_theme, activite:data_class_activite};
+      var result = data_total.filter(o => Object.keys(filterBy).every(k => filterBy[k].some(f => o[k] === f)));
+
+      $('#myUL').empty();
+      for(var k = 0 ; k < result.length; k++){
+          $("#myUL").append("<tr style='padding: 0px;'><td>"+k+"</td><td>"+result[k].title+"</td><td>"+result[k].enfant+"</td><td>"+result[k].langue+"</td><td>"+result[k].age+"</td><td>"+result[k].theme+"</td><td>"+result[k].activite_real+"</td><td><form method='GET' action='./dossier_offre.html' style='height: 7px;'><button class='btn btn-large btn-info' style='padding: 0px; font-size: 12px; height: 25px; width: 60px;' type='submit' name='"+result[k].title+"'>Examiner</button></form></td></tr>");
+      }
+
+
+
+      function checkedeachValue(data_cb_class){
+        var value;
+        var checkedValue = document.querySelector('.'+data_cb_class+':checked');
+        if(checkedValue == null){
+          value = "null";
+        } else {
+          var result = checkedValue.value;
+          value = result.split(",")[1];
+        }
+        return value;
+      }
+
+      // var datas = [];
+      // var categories = [];
+      //
+      // if(data_total===valange_data){
+      //   datas.push(valange_data);
+      //   //checkedeachValue('checkbox_enfant_madeleine',datas);
+      //   $('#myUL').empty();
+      //   for(var k = 0 ; k < datas[0].length; k++){
+      //       $("#myUL").append("<tr style='padding: 0px;'><td>"+data_total[k].title+"</td><td>"+data_total[k].enfant+"</td><td>"+data_total[k].langue+"</td><td>"+data_total[k].age+"</td><td>"+data_total[k].theme+"</td><td>"+data_total[k].activite+"</td><td><form method='GET' action='./dossier_offre.html' style='height: 7px;'><button class='btn btn-large btn-info' style='padding: 0px; font-size: 12px; height: 25px; width: 60px;' type='submit' name='"+data_total[k].title+"'>Examiner</button></form></td></tr>");
+      //   }
+      // }
+      // categories.push(checkedeachValue('checkbox_enfant_madeleine').split(",")[1]);
+      //
+      // var finaldata = [];
+      //
+      // var filerdata = datas;
+      //
+      // for(var i = 0; i < categories.length; i++){
+      //   var result = filerdata.filter(function(obj, i){
+      //     return obj.type===categories[i];
+      //   })
+      //   filerdata=result;
+      //   if(i==categories.length){
+      //     finaldata.push(filerdata)
+      //   }
+      // }
+      //
+      // //
+      // function checkedeachValue(data_cb_class){
+      //   var value;
+      //   var checkedValue = document.querySelector('.'+data_cb_class+':checked');
+      //   if(checkedValue == null){
+      //     value = "null";
+      //   } else {
+      //     var result = checkedValue.value;
+      //     value = result;
+      //   }
+      //   return value;
+      // }
+    }
+
+    </script>
+    <script src="./assets/js/multirange.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap-transition.js"></script>
+    <script src="./assets/js/bootstrap-alert.js"></script>
+    <script src="./assets/js/bootstrap-modal.js"></script>
+    <script src="./assets/js/bootstrap-dropdown.js"></script>
+    <script src="./assets/js/bootstrap-scrollspy.js"></script>
+    <script src="./assets/js/bootstrap-tab.js"></script>
+    <script src="./assets/js/bootstrap-tooltip.js"></script>
+    <script src="./assets/js/bootstrap-popover.js"></script>
+    <script src="./assets/js/bootstrap-button.js"></script>
+    <script src="./assets/js/bootstrap-collapse.js"></script>
+    <script src="./assets/js/bootstrap-carousel.js"></script>
+    <script src="./assets/js/bootstrap-typeahead.js"></script>
+    <script src="./assets/js/bootstrap-affix.js"></script>
+
+    <script src="./assets/js/holder/holder.js"></script>
+    <script src="./assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="./assets/js/application.js"></script>
+
+  </body>
+</html>

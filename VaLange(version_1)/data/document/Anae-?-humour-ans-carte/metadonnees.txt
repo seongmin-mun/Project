@@ -1,0 +1,14 @@
+<ul style="list-style-type:none;">
+<li>Fichier : <a href="Anae-?-humour-carte.mp4">Anae-?-humour-carte.mp4</a> (durée : 15sec)</li>
+<li>Projet : CoLaJE</li>
+<li>Extrait de la vidéo : [lien Ortolang à venir]</li>
+</ul>
+
+<ul style="list-style-type:none;">
+<li>Enfant : Anae</li>
+<li>Âge : ?</li>
+<li>Langue : fr</li>
+<li>Lieu : salon</li>
+<li>Activité : jeu de société (cartes)</li>
+<li>Thème(s) : humour, rire partagé, connivence\</li>n<li>Mot(s)-clé : carte</li>
+</ul>

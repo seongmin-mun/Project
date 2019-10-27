@@ -1,0 +1,13 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+div .span4{
+  text-align: center;
+  color: white;
+}
+
+div .hero-unit{
+  background-image: image(./assets/img/examples/slide-01.jpg);
+}
