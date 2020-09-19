@@ -1,0 +1,52 @@
+********참고 사이트*********
+
+https://sumniya.tistory.com/29
+https://ratsgo.github.io/statistics/2017/06/30/bayesinfer/
+https://ratsgo.github.io/statistics/2017/05/28/binomial/
+https://nbviewer.jupyter.org/github/metamath1/ml-simple-works/blob/master/naive/naive.ipynb
+https://namu.wiki/w/%EB%B2%A0%EC%9D%B4%EC%A6%88%20%EC%A0%95%EB%A6%AC
+https://blog.naver.com/mykepzzang/220834940797
+https://smwgood.tistory.com/15?category=751569
+http://solarisailab.com/archives/2614
+https://m.blog.naver.com/PostView.nhn?blogId=mykepzzang&logNo=220834940797&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+https://datascienceschool.net/view-notebook/ae35a40deb884cf88e85135b4b5a1130/
+
+********패키시화 부분*********
+
+-추정량을 계산하는 부분
+1.베이즈 추정량
+사후분포의 mean squared error를 최소화하는 값으로, 사후분포의 평균값이다
+2.사후 메디안 추정량
+사후분포의 mean absolute error를 최소화하는 값으로, 사후분포의 중간값이다.
+3.MAP 추정량(최대 사후 확률 추정량)
+사후밀도를 최대화하는 값, 즉, 주어진 데이터에 대해 maximum likelihood를 갖는 θ 를 찾는 방법으로 사후 최빈값 추정량이라고 한다.
+
+-스무딩 방법 적용 부분
+
+-연속 단어 (워킹 메모리) N값 설정하는 부분
+
+********패키지에 사용된 변수 설명*********
+
+self.iteration = 반복 횟수 선택
+self.estimator = 추정량 계산 방법 선택
+self.smoothing = 스무딩방법 선택
+self.sequencerange = 워킹 메모리의 범위 지정
+input_dic = 학습을 위해서 사용되는 말뭉치 - 스무딩에 따라 변화
+constructions = 구문 유형의 수 (17개)
+constructions_sentence = 구문 유형과 이에 대한 문장
+itemsfreqdict = 아이템별 위치에서 등장 할 빈도
+itemssquenfreq = 각 위치의 아이템들의 총합 (배열)
+
+(업데이트) - 스무딩에 따라 변화
+initial_num =  구문 유형의 총합
+initial_input_freq =  초기 구문 유형에 대한 빈도값 (빈도만) 배열 형태
+initial_construction_freq = 초기 구문 유형과 그 빈도값 (구문유형+빈도) 사전 형태
+initial_itemsfreqdict = 초기 개별 아이템별 구문 유형에서 등장하는 빈도
+
+
+
+학습데이터는 라플레시로
+테스트는 no case marking포함
+워킹 메모리는 앞의 단어에만 적용  0,1,2,3 - 리미트 없이
+사후 확률값 출력
+
